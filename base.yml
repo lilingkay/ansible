@@ -1,0 +1,9 @@
+---
+
+- name: Configure Base AMI
+  hosts: default
+  become: yes
+  roles:
+    - common
+    - frontend
+    - backend
