@@ -1,6 +1,6 @@
 ---
 
-- name: Configure Base AMI
+- name: Configure EC2
   hosts: default
   become: yes
   roles:
