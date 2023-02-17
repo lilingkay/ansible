@@ -1,8 +1,4 @@
-----
-- name: common configuration 
-  hosts: all
-  become: true
-  tasks: 
+---- 
    - name: update OS
      register: updatesys
      apt:
