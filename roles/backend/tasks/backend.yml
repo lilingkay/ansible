@@ -24,7 +24,7 @@
 
 - name: Unzip web server
   unarchive:
-    src: "{{ zip_filepath }}"
+    src: /tmp/befiles/backend.zip
     dest: /var/www/html
 
 - name: Creates directory
