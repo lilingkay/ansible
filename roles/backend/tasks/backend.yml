@@ -10,7 +10,7 @@
     state: directory
 
 - name: Copy web server file
-  command: aws s3 cp "{{ zip_s3_filepath }}" "{{ zip_filepath }}"
+  command: aws s3 cp s3://skillup-malcedo-backend-s3/backend.zip /tmp/befiles/backend.zip
 
 - name: Clean /var/www/html
   file:
