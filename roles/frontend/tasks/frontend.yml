@@ -12,7 +12,7 @@
     state: directory
 
 - name: Copy web server file
-  command: aws s3 cp "{{ zip_s3_filepath }}" "{{ zip_filepath }}"
+  command: aws s3 cp s3://skillup-malcedo-frontend-s3/frontend.zip /tmp/befiles/backend.zip
 
 - name: Clean /var/www/html
   file:
@@ -26,7 +26,7 @@
 
 - name: Unzip web server file
   unarchive:
-    src: "{{ zip_filepath }}"
+    src: /tmp/befiles/backend.zip
     dest: /var/www/html
 
 - name: Creates directory
